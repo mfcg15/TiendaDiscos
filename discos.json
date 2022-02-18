@@ -1,0 +1,25 @@
+[
+    {
+        "id": 0,
+        "nombre": "Yeah Yeah Yeahs",
+        "precio": 200,
+        "año" : 2002,
+        "url" : "https://www.sopitas.com/wp-content/uploads/2017/09/yeah-yeah-yeahs-fever-to-tell-deluxe.jpg"
+    },
+
+    {
+        "id": 1,
+        "nombre": "Red Hot Chili Peppers",
+        "precio": 350,
+        "año" : 1998,
+        "url" : "https://i1.wp.com/www.sopitas.com/wp-content/uploads/2018/06/red-hot-chili-peppers.jpg"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Blink 182",
+        "precio": 175,
+        "año" : 2005,
+        "url" : "https://m.media-amazon.com/images/I/71VjFFfuJ4L._SX425_.jpg"
+    }
+]

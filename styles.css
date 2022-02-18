@@ -1,0 +1,344 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#d945f7 0.5px, transparent 0.5px), radial-gradient(#d945f7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+}
+
+.titulo
+{
+    text-align: center;
+    padding: 25px;
+}
+
+.contenedor
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contendor_superior
+{
+    width: 100%;
+    display: flex;
+}
+
+.contendor_ingresar
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.panel_ingresar
+{
+    width: 50%;
+}
+
+.subtitulos
+{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.todo_formulario
+{
+    border-radius: 5%;
+    padding: 10px;
+    background: white;
+}
+
+.formulario
+{
+    display: grid;
+    gap: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.formulario_grupo
+{
+    position: relative;
+    --color: #5757577e;
+}
+
+.formulario_input
+{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding:  .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+.formulario_input:focus
+{
+    border-bottom: 1px solid #3866f2;
+}
+
+.formulario_label
+{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+
+.formulario_input:focus + .formulario_label, .formulario_input:not(:placeholder-shown) + .formulario_label
+{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+}
+
+.formulario_input_error
+{
+    font-size: 12px;
+    margin-top: 6px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    display: none;
+    color: #bb2929;
+}
+
+.formulario_btnIngresar
+{
+    background: #3866f2;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.contendor_buscar
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.panel_buscar
+{
+    padding: 10px;
+}
+
+.todo_buscar
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.mensajeListaVacia
+{
+    padding: 20px;
+    color: #bb2929;
+    font-size: 20px;
+    display: none;
+}
+
+.mensajeListaVaciaTabla
+{
+    padding: 20px;
+    color: #bb2929;
+    font-size: 20px;
+}
+
+.elbuscar
+{
+    display: flex;
+    margin-top: 10px;
+    *box-shadow: 0 2px 3px rgba(0 0 0 / 0.15);
+}
+
+.barra_blanca
+{
+    display: flex;
+    background-color:white;
+}
+
+.input_buscar
+{
+    width: 500px;
+    height: 40px;
+    border: none;
+    padding: 10px;
+}
+
+.input_buscar:focus
+{
+    outline: none;
+}
+
+.dicono_buscar
+{
+    display: none;
+}
+
+.dicono_buscar_activo
+{
+    display: block;
+}
+
+.icono_buscar
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.dicono_equis
+{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.icono_equis
+{
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.dicono_equis_activo
+{
+    opacity: 1;
+}
+
+.boton_buscar
+{
+    height: 40px;
+    width: 64px;
+    background: #F8F8F8;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mensajeCampoBuscarVacio
+{
+    color: rgb(29, 27, 27);
+    padding: 20px;
+    text-align: center;
+}
+
+.mensajeDiscoNoExiste
+{
+    color: red;
+    padding: 20px;
+    text-align: center;
+}
+
+.CampoDiscoExiste
+{
+    margin: 30px;
+    padding: 16px;
+    display: flex;
+    background-color: white;
+}
+
+.textoNegritaDiscoExiste
+{
+    font-weight: bold;
+}
+
+.ImagenDisco
+{
+    height: 230px;
+    width: 230px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 6px;
+    border-radius: 10px;
+}
+
+.textoDiscoExiste
+{
+    padding: 35px 5px 10px 0px;
+}
+
+.firstTextoDiscoExiste
+{
+    margin-top: 14px;
+}
+
+.contendor_inferior
+{
+    width: 100%;
+}
+
+.todo_tabla
+{
+    display: flex;
+    justify-content: center;
+}
+
+table 
+{
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+  
+th 
+{
+    background: rgb(170, 162, 243);
+    border: 2px solid black;
+}
+  
+td,tr 
+{
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+}
+
+.boton_borrar
+{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* validaciones */
+
+.formulario_grupo_correcto .formulario_input:focus + .formulario_label
+{
+    color: #3866f2;
+}
+
+.formulario_grupo_incorrecto .formulario_input:focus + .formulario_label
+{
+    color: #bb2929;
+}
+
+.formulario_grupo_incorrecto .formulario_input
+{
+    border-bottom: 1px solid #bb2929;
+}
+
+.formulario_input_error_activo
+{
+    display: block;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tienda de Disco</title>
+</head>
+<body>
+    <h1 class="titulo">Tienda de discos</h1>
+    <div class="contenedor">
+        <div class="contendor_superior">
+            <div class="contendor_ingresar">
+                <div class="panel_ingresar">
+                    <h2 class="subtitulos">Ingreso de discos</h2>
+                    <div class="todo_formulario">
+                        <form method="post" class="formulario" id="formulario">
+                            <div class="formulario_grupo">
+                                <input type="text" class="formulario_input" id="txt_nombre" placeholder=" " required/>
+                                <label for="txt_nombre" class="formulario_label">Nombre</label>
+                            </div>
+                            <div class="formulario_grupo" id="grupo_precio">
+                                <input type="number" class="formulario_input" id="txt_precio" name="precio" min="0.01" max="999999.99"  step="0.01" placeholder=" " required/>
+                                <label for="txt_precio" class="formulario_label">Precio</label>
+                                <p class="formulario_input_error">Ingrese un precio mayor a $ 0</p>
+                            </div>
+                            <div class="formulario_grupo" id="grupo_año">
+                                <input type="number" class="formulario_input" id="txt_año" name="año" min="1930" max="2999" placeholder=" " required/>
+                                <label for="txt_año" class="formulario_label">Año</label>
+                                <p class="formulario_input_error">Ingrese un año mayor a 1929</p>
+                            </div>
+                            <div class="formulario_grupo">
+                                <input type="text" class="formulario_input" id="txt_url" placeholder=" " required/>
+                                <label for="txt_url" class="formulario_label">Url</label>
+                            </div>
+                            <input type="submit" class="formulario_btnIngresar" value="Ingresar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="contendor_buscar">
+                <div class="panel_buscar">
+                    <h2 class="subtitulos">Buscar discos</h2>
+                    <p class=mensajeListaVacia id=mensajeVasioCampoBusqueda>La tienda no tiene discos. Ingresa un disco</p>
+                    <div class="todo_buscar" id="todo_buscar" >
+                        <div class="elbuscar">
+                            <div class="barra_blanca" id="prueba">
+                                <div class="dicono_buscar">
+                                    <img class="icono_buscar" src="Iconos_svg/buscar_pequeño.svg">
+                                </div>
+                                <div class="inputbuscar">
+                                    <input type="text" placeholder="Ingrese el nombre del disco a buscar" class="input_buscar" onblur="Desaparecer()" onfocus="Aparecer()" id="txt_buscar" required>
+                                </div>
+                                <div class="dicono_equis">
+                                    <img class="icono_equis" onclick="LimpiarCampoBuscar()" src="Iconos_svg/equis.svg">
+                                </div>
+                            </div>
+                           <div>
+                                <button class="boton_buscar" onclick="SearchDisco()" id="btn_buscar"><img src="Iconos_svg/buscar.svg"></button>
+                           </div>
+                        </div>
+                        <div id="informacion_disco">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contendor_inferior">
+            <h2 class="subtitulos">Lista de discos</h2>
+            <div class="todo_tabla">
+                <table id="tablaDiscos"></table>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
